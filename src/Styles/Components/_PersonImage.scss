@@ -1,0 +1,22 @@
+@-webkit-keyframes flipIn {
+  from {
+    @include transform(perspective(800px) rotate3d(0, 1, 0, 90deg) scale(1));
+    opacity: 0;
+  }
+
+  to {
+    @include transform(perspective(800px));
+  }
+}
+
+.personImage {
+	width: 400px;
+	height: 400px;
+	background-color: white;
+	background-size: cover;
+
+}
+
+.personFlipping {
+	@include animation(flipIn 0.5s cubic-bezier(.17,.67,.17,1.27));
+}
